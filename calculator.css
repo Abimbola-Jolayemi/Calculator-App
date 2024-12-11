@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
+.body-div{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.main-container {
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-container {
+    background: linear-gradient(to bottom, #42e695, #3bb2b8);
+    border: 3px solid #ff6b6b;
+    border-radius: 25px;
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title{
+    padding: 20px;
+    color: #c42929;
+    width: 30%;
+}
+
+.title h2{
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.screen-div {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.screen-div input {
+    width: 100%;
+    height: 60px;
+    background-color: #f7fff7;
+    border: 1px solid #2b7a78;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 24px;
+    padding: 10px;
+    outline: none;
+}
+
+.screen-div input::placeholder{
+    color: rgb(228, 222, 222);
+}
+
+.operators-and-operands-div {
+    width: 90%;
+    height: 70%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.button button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f7fff7;
+    background: #3aafa9;
+    /* transition: background 0.3s ease; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button button:hover {
+    background: #2b7a78;
+}
+
+
+.clear-btn button {
+    background-color: #ff6b6b;
+}
+
+.equal-btn {
+    grid-row: span 2;
+    height: 130px;
+}
+
+.equal-btn button {
+    background-color: #ffb700;
+    height: 100%;
+}
+
+.zero-btn {
+    grid-column: span 2;
+}
+
+.zero-btn button {
+    background-color: #3aafa9;
+}
+
+@media  (max-width: 768px) {
+    .body-div{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .calculator-container{
+        width: 70%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .body-div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
